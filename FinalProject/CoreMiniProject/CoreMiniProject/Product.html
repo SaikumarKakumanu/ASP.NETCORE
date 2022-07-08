@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $.get("http://localhost:8423/api/products", function (data, status) {
+                    console.log(data);
+                });
+            });
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $.get("https://coreminiproject20220707142828.azurewebsites.net/weatherforecast", function (data, status) {
+                    console.log(data);
+                });
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <button>GetProducts</button>
+    <button id="btn">WeatherForecast</button>
+    
+</body>
+</html>
